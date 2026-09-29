@@ -1,0 +1,171 @@
+/* --- СОВРЕМЕННЫЙ IT-ДИЗАЙН ДЛЯ ORM GUIDE --- */
+
+/* Импорт красивого шрифта для IT-тематики */
+@import url('https://googleapis.com');
+
+:root {
+  --bg-main: #0b0f19;       /* Глубокий темно-синий/черный фон */
+  --bg-card: #131a26;       /* Фон для карточек и сайдбара */
+  --accent-color: #38bdf8;  /* Яркий голубой (кибер-акцент) */
+  --text-main: #f1f5f9;     /* Белый текст */
+  --text-muted: #94a3b8;    /* Серый текст для описаний */
+  --border-color: #1e293b;  /* Цвет границ */
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* --- ШАПКА (HEADER & NAV) --- */
+header {
+  background-color: rgba(11, 15, 25, 0.8) !important;
+  backdrop-filter: blur(12px); /* Эффект размытия стекла */
+  border-bottom: 1px solid var(--border-color);
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent !important;
+  padding: 10px 20px;
+}
+
+.nav .brand span {
+  font-weight: 700;
+  color: var(--text-main) !important;
+  letter-spacing: -0.5px;
+}
+
+.nav .menu a.pseudo {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav .menu a.pseudo:hover, 
+.nav .menu a.pseudo.active {
+  color: var(--accent-color) !important;
+  background: transparent !important;
+}
+
+/* --- КОНТЕЙНЕРЫ И СЕТКА --- */
+.container-main {
+  max-width: 1200px;
+  margin: 120px auto 40px auto;
+  padding: 0 20px;
+  gap: 30px; /* Отступы между main и aside */
+}
+
+/* --- СТИЛИЗАЦИЯ СТАТЬИ И ТЕКСТА --- */
+main article {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+h1, h2, h3 {
+  color: var(--text-main);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #fff, var(--text-muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* Для кода (в тему ORM) */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  background: #1e293b;
+  color: var(--accent-color);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* --- САЙДБАР (ASIDE) --- */
+aside {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.sidebar-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+aside ul {
+  padding-left: 20px;
+}
+
+aside a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+aside a:hover { opacity: 0.8; }
+
+/* Форма подписки */
+aside input[type="email"] {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+aside button.button {
+  background: var(--accent-color) !important;
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: transform 0.2s;
+}
+aside button.button:hover {
+  transform: translateY(-2px);
+}
+
+/* --- ПОДВАЛ (FOOTER) --- */
+footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+/* --- МОБИЛЬНАЯ АДАПТАЦИЯ --- */
+.burger-btn span {
+  background-color: var(--text-main);
+}
+
+@media (max-width: 767px) {
+  .nav .menu {
+    background: var(--bg-card) !important;
+    border-bottom: 1px solid var(--border-color);
+  }
+  main article, aside {
+    padding: 20px;
+  }
+}

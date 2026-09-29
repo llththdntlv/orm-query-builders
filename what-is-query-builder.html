@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Builders | ORM & Query Builders</title>
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand"><span>🤖 ORM & SQL Guide</span></a>
+      <button class="burger-btn" id="burgerToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <div class="menu" id="navMenu">
+        <a href="index.html" class="pseudo">Главная</a>
+        <a href="what-is-orm.html" class="pseudo">Что такое ORM</a>
+        <a href="what-is-query-builder.html" class="pseudo active">Query Builders</a>
+        <a href="comparison.html" class="pseudo">Сравнение</a>
+        <a href="tutorials.html" class="pseudo">Видеоуроки</a>
+        <a href="sources.html" class="pseudo">Источники</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex container-main">
+    <main class="three-fourth full-half">
+      <article>
+        <h1>Архитектура Построителей Запросов (Query Builders)</h1>
+        <p>Если ORM пытается полностью скрыть от разработчика реляционную природу баз данных, то <strong>Query Builders</strong> преследуют иную цель. Они предоставляют программный интерфейс (API) для гибкого конструирования стандартных SQL-запросов.</p>
+        
+        <h2>Почему разработчики выбирают Query Builders?</h2>
+        <p>Использование построителей запросов избавляет проект от необходимости парсинга сырых строк. Вместо склеивания текста <code>"SELECT * FROM users WHERE id = " + id</code>, вы используете безопасные вызовы цепочек методов:</p>
+        <p><code>db('users').where('id', id).select()</code></p>
+        
+        <h2>Ключевые преимущества</h2>
+        <ul>
+          <li><strong>Полный контроль над SQL:</strong> Вы точно знаете, какой запрос будет сгенерирован под капотом, что исключает неожиданные просадки производительности.</li>
+          <li><strong>Динамическое построение условий:</strong> Легко добавлять фильтры в зависимости от входящих параметров HTTP-запроса (например, пагинация или поиск).</li>
+          <li><strong>Типизация:</strong> Современные построители запросов полностью совместимы с TypeScript, гарантируя валидность названий полей еще на этапе компиляции.</li>
+        </ul>
+      </article>
+    </main>
+
+    <aside class="one-fourth full-half">
+      <div class="sidebar-block">
+        <h3>Примеры</h3>
+        <ul>
+          <li><a href="https://knexjs.org" target="_blank" rel="noreferrer">Knex.js Справочник</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer><div class="footer-content"><p>&copy; 2026 Все права защищены.</p></div></footer>
+</body>
+</html>

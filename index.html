@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ORM & Query Builders | Главная</title>
+  <!-- Подключаем фреймворк Picnic CSS -->
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  <!-- Подключаем ваши кастомные стили -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Подключаем логику для бургер-меню -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ХЕДЕР С НАВИГАЦИЕЙ -->
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand">
+        <span>🤖 ORM & SQL Guide</span>
+      </a>
+      
+      <!-- Кнопка-гамбургер для мобильных -->
+      <button class="burger-btn" id="burgerToggle" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Основные ссылки -->
+      <div class="menu" id="navMenu">
+        <a href="index.html" class="pseudo active">Главная</a>
+        <a href="what-is-orm.html" class="pseudo">Что такое ORM</a>
+        <a href="what-is-query-builder.html" class="pseudo">Query Builders</a>
+        <a href="comparison.html" class="pseudo">Сравнение</a>
+        <a href="tutorials.html" class="pseudo">Видеоуроки</a>  
+        <a href="source.html" class="pseudo">Источники</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ОСНОВНАЯ СЕТКА САЙТА -->
+  <div class="flex container-main">
+    
+    <!-- ГЛАВНЫЙ КОНТЕНТ (Занимает 3/4 экрана) -->
+    <main class="three-fourth full-half">
+      <article>
+        <h1>Эволюция работы с базами данных: от SQL к ORM</h1>
+        <p>В современной фронтенд и бэкенд разработке взаимодействие с базами данных проделало огромный путь. Разработчикам больше не нужно писать километры сырых SQL-запросов вручную для решения типовых задач. На смену им пришли мощные абстракции.</p>
+        
+        <h2>Зачем нужны абстракции?</h2>
+        <p>При создании любого веб-приложения возникает необходимость сохранять данные. Исторически для этого использовался чистый SQL (Structured Query Language). Однако ручное написание запросов имеет ряд критических недостатков:</p>
+        
+        <ul>
+          <li><strong>Высокая вероятность ошибок:</strong> Опечатка в названии таблицы или колонки обнаруживается только во время выполнения кода.</li>
+          <li><strong>Уязвимости безопасности:</strong> Неправильная конкатенация строк открывает двери для разрушительных SQL-инъекций (SQLi).</li>
+          <li><strong>Дублирование кода:</strong> Рутинные операции CRUD (Create, Read, Update, Delete) приходится описывать снова и снова для каждой сущности.</li>
+        </ul>
+
+        <h2>Появление Query Builders (Построителей запросов)</h2>
+        <p>Первым шагом к упрощению стали <code>Query Builders</code>. Это специальные библиотеки, которые позволяют конструировать SQL-запросы с помощью методов языка программирования (например, JavaScript или TypeScript). Вы пишете функции, а библиотека сама превращает их в валидный SQL-код.</p>
+        <p>Ярким примером в экосистеме Node.js является библиотека <code>Knex.js</code> или современный конструктор <code>Prisma Client</code>. Они обеспечивают автодополнение кода и базовую безопасность из коробки.</p>
+
+        <h2>Вершина абстракции — ORM системы</h2>
+        <p><code>ORM (Object-Relational Mapping)</code> — это технология, которая полностью связывает таблицы базы данных с объектами или классами в коде программного обеспечения. Каждая строка в таблице становится объектом, а каждая колонка — его свойством.</p>
+        <p>С ORM вы можете работать с базой данных, вообще не зная синтаксиса SQL. Вы просто вызываете метод <code>user.save()</code> или <code>post.delete()</code>, а система делает всю магию за вас.</p>
+        
+        <blockquote>
+          <strong>Важно понимать:</strong> Каждая абстракция имеет свою цену. Чем выше уровень библиотеки (ORM), тем медленнее могут выполняться сложные запросы по сравнению с чистым, оптимизированным SQL.
+        </blockquote>
+      </article>
+    </main>
+
+    <!-- ОСМЫСЛЕННЫЙ САЙДБАР (Занимает 1/4 экрана) -->
+    <aside class="one-fourth full-half">
+      <div class="sidebar-block">
+        <h3>Полезные ссылки</h3>
+        <ul>
+          <li><a href="https://prisma.io" target="_blank" rel="noreferrer">Документация Prisma</a></li>
+          <li><a href="https://sequelize.org" target="_blank" rel="noreferrer">Документация Sequelize</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <h3>Рассылка</h3>
+        <form>
+          <input type="email" placeholder="Ваш Email" required>
+          <button type="submit" class="button extend">Подписаться</button>
+        </form>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Все права защищены. Студент [Ваше ФИО], группа [Группа]</p>
+    </div>
+  </footer>
+
+</body>
+</html>

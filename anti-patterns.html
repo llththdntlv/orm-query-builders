@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Антипаттерны | ORM & Query Builders</title>
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand"><span>🤖 ORM & SQL Guide</span></a>
+      <button class="burger-btn" id="burgerToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <div class="menu" id="navMenu">
+        <a href="index.html" class="pseudo">Главная</a>
+        <a href="what-is-orm.html" class="pseudo">Что такое ORM</a>
+        <a href="what-is-query-builder.html" class="pseudo">Query Builders</a>
+        <a href="comparison.html" class="pseudo">Сравнение</a>
+        <a href="tutorials.html" class="pseudo">Видеоуроки</a>
+        <a href="sources.html" class="pseudo">Источники</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex container-main">
+    <main class="three-fourth full-half">
+      <article>
+        <h1>Популярные ошибки и антипаттерны использования ORM</h1>
+        <p>Абстракции могут играть злую шутку с неопытными разработчиками. Рассмотрим критическую проблему систем объектно-реляционного отображения.</p>
+        
+        <h2>Проблема запросов N+1</h2>
+        <p>Этот антипаттерн возникает, когда приложение выполняет один запрос для получения родительских записей, а затем совершает по одному отдельному SQL-запросу для получения связанных данных каждой строки в цикле.</p>
+        <p>В результате вместо 1 или 2 оптимизированных запросов с оператором <code>JOIN</code>, база данных выполняет сотни мелких транзакций, намертво блокируя работу веб-сервера.</p>
+      </article>
+    </main>
+
+    <aside class="one-fourth full-half">
+      <div class="sidebar-block">
+        <h3>Важно</h3>
+        <p>Всегда используйте логирование запросов (SQL Logging) на этапе локальной разработки.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer><div class="footer-content"><p>&copy; 2026 Все права защищены.</p></div></footer>
+</body>
+</html>

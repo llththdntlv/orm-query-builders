@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Что такое ORM | ORM & Query Builders</title>
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand"><span>🤖 ORM & SQL Guide</span></a>
+      <button class="burger-btn" id="burgerToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <div class="menu" id="navMenu">
+        <a href="index.html" class="pseudo">Главная</a>
+        <a href="what-is-orm.html" class="pseudo active">Что такое ORM</a>
+        <a href="what-is-query-builder.html" class="pseudo">Query Builders</a>
+        <a href="comparison.html" class="pseudo">Сравнение</a>
+        <a href="tutorials.html" class="pseudo">Видеоуроки</a>
+        <a href="sources.html" class="pseudo">Источники</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex container-main">
+    <main class="three-fourth full-half">
+      <article>
+        <h1>Глубокое погружение в концепцию ORM</h1>
+        <p><strong>Object-Relational Mapping (ORM)</strong> — это технология программирования, которая связывает базы данных с концепциями объектно-ориентированных языков. Она создает виртуальную объектную базу данных прямо поверх реляционной структуры.</p>
+        
+        <h2>Основные шаблоны проектирования ORM</h2>
+        <p>Существует два доминирующих архитектурных подхода к реализации ORM:</p>
+        <ol>
+          <li><strong>Active Record:</strong> Модель в коде представляет собой одновременно и строку в таблице, и содержит методы для работы с базой (например, <code>user.save()</code>). Этот паттерн используется в Django ORM и Sequelize. Он прост в освоении, но нарушает принцип единой ответственности.</li>
+          <li><strong>Data Mapper:</strong> Процесс сохранения данных полностью отделен от бизнес-логики. Модель — это чистый объект с данными, а для их сохранения используется специальный репозиторий (например, TypeORM или Hibernate). Это делает код чище и гибче.</li>
+        </ol>
+
+        <h2>Преимущества использования ORM</h2>
+        <p>Основная ценность ORM заключается в абстрагировании от конкретной СУБД. Вы можете писать код на JavaScript или Python, а ORM автоматически переведет его на диалект PostgreSQL, MySQL или SQLite. Это снижает риск привязаться к одному вендору и значительно ускоряет прототипирование продуктов.</p>
+      </article>
+    </main>
+
+    <aside class="one-fourth full-half">
+      <div class="sidebar-block">
+        <h3>Разделы статьи</h3>
+        <ul>
+          <li><a href="#">Шаблоны ORM</a></li>
+          <li><a href="#">Преимущества</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer><div class="footer-content"><p>&copy; 2026 Все права защищены.</p></div></footer>
+</body>
+</html>

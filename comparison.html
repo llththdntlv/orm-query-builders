@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сравнение технологий | ORM & Query Builders</title>
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand"><span>🤖 ORM & SQL Guide</span></a>
+      <button class="burger-btn" id="burgerToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <div class="menu" id="navMenu">
+        <a href="index.html" class="pseudo">Главная</a>
+        <a href="what-is-orm.html" class="pseudo">Что такое ORM</a>
+        <a href="what-is-query-builder.html" class="pseudo">Query Builders</a>
+        <a href="comparison.html" class="pseudo active">Сравнение</a>
+        <a href="tutorials.html" class="pseudo">Видеоуроки</a>
+        <a href="sources.html" class="pseudo">Источники</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex container-main">
+    <main class="three-fourth full-half">
+      <article>
+        <h1>Сравнительный анализ подходов работы с СУБД</h1>
+        <p>Выбор между чистым SQL, построителями запросов и полноценными ORM зависит от масштаба проекта, квалификации команды и требований к скорости выполнения операций.</p>
+        
+        <!-- Стилизованная семантическая таблица -->
+        <div style="overflow-x: auto;">
+          <table class="primary" style="width: 100%;">
+            <thead>
+              <tr>
+                <th>Критерий</th>
+                <th>Чистый SQL</th>
+                <th>Query Builders</th>
+                <th>ORM Системы</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Производительность</strong></td>
+                <td>Максимальная</td>
+                <td>Высокая (минимальный оверхед)</td>
+                <td>Средняя (зависит от маппинга)</td>
+              </tr>
+              <tr>
+                <td><strong>Скорость разработки</strong></td>
+                <td>Низкая</td>
+                <td>Средняя/Высокая</td>
+                <td>Максимальная</td>
+              </tr>
+              <tr>
+                <td><strong>Порог входа</strong></td>
+                <td>Высокий (нужен SQL)</td>
+                <td>Средний</td>
+                <td>Низкий (только ООП)</td>
+              </tr>
+              <tr>
+                <td><strong>Контроль миграций</strong></td>
+                <td>Ручной</td>
+                <td>Программный (высокий)</td>
+                <td>Автоматический (декларативный)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </main>
+
+    <aside class="one-fourth full-half">
+      <div class="sidebar-block">
+        <h3>Итог</h3>
+        <p>Для стартапов идеальны ORM. Для высоконагруженных систем — Query Builders.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer><div class="footer-content"><p>&copy; 2026 Все права защищены.</p></div></footer>
+</body>
+</html>

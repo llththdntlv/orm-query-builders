@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экосистема Node.js | ORM & Query Builders</title>
+  <link rel="stylesheet" href="https://jsdelivr.net">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="brand"><span>🤖 ORM & SQL Guide</span></a>
+      <button class="burger-btn" id="burgerToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+      <div class="menu" id="navMenu">
+        <a href="index.html" class="pseudo">Главная</a>
+        <a href="what-is-orm.html" class="pseudo">Что такое ORM</a>
+        <a href="what-is-query-builder.html" class="pseudo">Query Builders</a>
+        <a href="comparison.html" class="pseudo">Сравнение</a>
+        <a href="tutorials.html" class="pseudo">Видеоуроки</a>
+        <a href="sources.html" class="pseudo">Источники</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="flex container-main">
+    <main class="three-fourth full-half">
+      <article>
+        <h1>Инструменты работы с БД в экосистеме JavaScript/TypeScript</h1>
+        <p>Node.js предлагает одну из самых богатых экосистем для работы с данными. Рассмотрим ключевых игроков на рынке:</p>
+        
+        <h3>1. Prisma ORM</h3>
+        <p>Современная Next-Gen ORM, использующая декларативную схему данных. На основе файла <code>schema.prisma</code> утилита автоматически генерирует строго типизированный клиент. Избавляет от написания классов моделей вручную.</p>
+
+        <h3>2. Sequelize</h3>
+        <p>Старейшая и наиболее проверенная временем ORM для Node.js. Работает на паттерне Active Record. Поддерживает все популярные СУБД, однако имеет проблемы со встроенной типизацией в TypeScript.</p>
+
+        <h3>3. TypeORM</h3>
+        <p>Инструмент, созданный под сильным влиянием Hibernate из мира Java. Полностью построен на декораторах и классах TypeScript. Идеален для крупных корпоративных приложений.</p>
+      </article>
+    </main>
+
+    <aside class="one-fourth full-half">
+      <div class="sidebar-block">
+        <h3>Ссылки</h3>
+        <ul>
+          <li><a href="https://typeorm.io" target="_blank" rel="noreferrer">Сайт TypeORM</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer><div class="footer-content"><p>&copy; 2026 Все права защищены.</p></div></footer>
+</body>
+</html>
