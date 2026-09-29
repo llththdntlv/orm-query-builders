@@ -10,4 +10,4 @@
 * **JavaScript:** Нативный код для мобильной навигации.
 
 ### Ссылки на проект:
-* **Живой сайт (GitHub Pages):** [СЮДА ВСТАВИТЕ ССЫЛКУ ПОСЛЕ ШАГА 2]
+* **Живой сайт (GitHub Pages):** [https://llththdntlv.github.io/orm-query-builders/]
